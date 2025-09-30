@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Árbol de Expresiones</title>
+    <link rel="stylesheet" href="arbol.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌳 Visualizador de Árbol de Expresiones</h1>
+        <p class="expression">Expresión: (5∗10)/((3−8)+5)</p>
+        
+        <!-- Controles -->
+        <div class="controls">
+            <h3>Selecciona el tipo de recorrido:</h3>
+            <div class="button-group">
+                <button id="preorderBtn" class="btn btn-primary">Prefija (Preorden)</button>
+                <button id="inorderBtn" class="btn btn-secondary">Infija (Entreorden)</button>
+                <button id="postorderBtn" class="btn btn-success">Postfija (Postorden)</button>
+                <button id="resetBtn" class="btn btn-warning">Reiniciar</button>
+            </div>
+        </div>
+
+        <!-- Área de visualización del árbol -->
+        <div class="tree-container">
+            <div class="tree" id="tree">
+                <!-- El árbol se generará dinámicamente con JavaScript -->
+            </div>
+        </div>
+
+        <!-- Panel de resultados -->
+        <div class="results-panel">
+            <h3>Resultado del Recorrido:</h3>
+            <div class="result-display" id="resultDisplay">
+                <span class="result-text">Selecciona un tipo de recorrido para ver el resultado</span>
+            </div>
+            
+            <div class="step-by-step" id="stepByStep">
+                <h4>Paso a paso:</h4>
+                <div class="steps" id="steps"></div>
+            </div>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="info-panel">
+            <h3>📚 Información sobre las Notaciones:</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Prefija (Preorden)</h4>
+                    <p><strong>Orden:</strong> Raíz → Izquierda → Derecha</p>
+                    <p><strong>Ejemplo:</strong> / ∗ 5 10 + − 3 8 5</p>
+                </div>
+                <div class="info-card">
+                    <h4>Infija (Entreorden)</h4>
+                    <p><strong>Orden:</strong> Izquierda → Raíz → Derecha</p>
+                    <p><strong>Ejemplo:</strong> 5 ∗ 10 / 3 − 8 + 5</p>
+                </div>
+                <div class="info-card">
+                    <h4>Postfija (Postorden)</h4>
+                    <p><strong>Orden:</strong> Izquierda → Derecha → Raíz</p>
+                    <p><strong>Ejemplo:</strong> 5 10 ∗ 3 8 − 5 + /</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="arbol.js"></script>
+</body>
+</html>
